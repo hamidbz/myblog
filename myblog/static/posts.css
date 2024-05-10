@@ -1,0 +1,46 @@
+.post-list {
+    
+    justify-content: center;
+}
+
+.post {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.prev,.next {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-number {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+}

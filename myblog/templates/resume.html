@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" href= "{% static 'resume.css' %}" >
+{% endblock header_links %}
+
+{% block title %} رزومه {% endblock title %}
+
+{% block content %}
+
+	<section>
+		<h2>تحصیلات</h2>
+		<ul>
+			<li> مهندسی کامپیوتر دانشگاه شهید باهنر - سال 1400</li>
+			<li>دیپلم ریاضی مدرسه نمونه - سال 1399</li>
+		</ul>
+	</section>
+	<section>
+		<h2>سوابق کاری</h2>
+		<ul>
+			<li>هوش مصنوعی 1402</li>
+			<li>توسعه سایت - 1401</li>
+		</ul>
+	</section>
+	<footer>
+		<p>ایمیل: h.r.bz1381@gmail.com<br>تلفن: 555-555-5555</p>
+	</footer>
+	<section>
+		<h2>مهارت ها</h2>
+		<ul>
+			<li>زبان برنامه نویسی پایتون</li>
+			<li>توسعه وب جنگوt</li>
+			<li>پایگاه دادهt: MySQL, PostgreSQL</li>
+		</ul>
+	</section>
+	<section>
+		<h2>نمونه کار ها</h2>
+		<ul>
+			<li><a href="https://example.com/project1">Project 1</a></li>
+			<li><a href="https://example.com/project2">Project 2</a></li>
+			<li><a href="https://example.com/project3">Project 3</a></li>
+		</ul>
+	</section>
+
+{% endblock content %}
+
+

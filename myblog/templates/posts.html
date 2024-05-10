@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} پست ها {% endblock title %}
+{% block header_links %}
+    <link rel="stylesheet" href="{% static 'posts.css' %}">    
+{% endblock header_links %}
+
+{% block content %}
+
+<main>
+    <section class="post-list">
+        {% for post in posts %}
+        <a href=" {% url 'details' post.id %} "> {{ post.title }} </a>
+        <p> {{  post.body  }} </p>
+        <small> {{ post.date }} </small><hr/>
+        {% endfor %}
+    </section>
+    <div class="pagination">
+        <button class="prev" disabled>پیشین</button>
+        <button class="next">بعدی</button>
+        <span class="page-number">صفحه {{ page }} از {{ totalPages }}</span>
+    </div>
+</main>
+
+{% endblock content %}

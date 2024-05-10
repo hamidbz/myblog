@@ -1,0 +1,38 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} </title>
+    <link rel="stylesheet" href= "{% static 'styles.css' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% block header_links %}{% endblock header_links %}
+    <link href="https://fonts.googleapis.com/css2?family=IRANSans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href= " {% url "contact" %} " >ارتباط با من</a></li>
+                <li><a href=" {% url "about" %} ">درباره من</a></li>
+                <li><a href=" {% url "posts" %} ">پست ها</a></li>
+                <li><a href=" {% url "home" %} ">خانه</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock content %}
+    <footer>
+        <h5> ما را در فضای مجازی دنبال کنید </h5>
+        <div class="virtual-spaces">
+            <a href="https://t.me/hamidr_bz" target="_blank"><span class="fa-solid fa-envelope" aria-hidden="true"></span>telegram</a> |
+            <a href="https://www.instagram.com/hamidreza_bazyar2000?igsh=dnJ2dzN4dzF3b3lz" target="_blank"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Virtual-Fixtures-USAF-AR.jpg/220px-Virtual-Fixtures-USAF-AR.jpg" width="20" height="20" alt="Virtual Fixtures icon"> instagram</a> |
+            <a href="h.r.bz1381@gmail.com" target="_blank"><img src="https://www.mountainequipment.com/dw/image/v2/BCDW_PRD/on/demandware.static/-/Sites-masterCatalog_MountainEquipment/default/dw2003a415/images/logo-MEC-white.png?sw=150&sh=40&sm=fit" width="20" height="20" alt="MEC icon"> Email</a> 
+          </div>
+          <p>&copy; 2024 My Personal Blog. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
