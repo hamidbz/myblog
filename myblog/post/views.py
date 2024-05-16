@@ -5,7 +5,7 @@ from .forms import AddComentForm
 
 def posts(request):
     posts_list = Post.objects.all()
-    paginator = Paginator(posts_list, 1)
+    paginator = Paginator(posts_list, 50)
     page = request.GET.get('page')
     if page == None:
         page=1

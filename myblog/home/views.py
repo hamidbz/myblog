@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.core.paginator import Paginator
 from post.models import Post
 from .forms import Mesage
+from .models import MesageModel
 
 
 def home(request):
@@ -15,5 +16,12 @@ def about(request):
 
 def contact(request):
     if request.method == 'post':
-        form = Mesage()
+        form = Mesage(request.POST)
+        if form.is_valid():
+            form_data = form.cleaned_data
+            obj = MesageModel()
+            obj.name = form_data.get("name")
+            obj.email = form_data.get("email")
+            obj.mesg = form_data.get("message")
+            obj.save()
     return render(request, 'contact.html')
